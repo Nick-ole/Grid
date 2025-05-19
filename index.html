@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css">
+    <title> Grid Layout en CSS</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Grid Layout en CSS</h1>
+        <p>Una guía técnica sobre el sistema de diseño bidimensional en CSS</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Resumen</h2>
+            <p>
+                Grid Layout es un sistema de cuadrícula bidimensional en CSS. Las cuadrículas se pueden usar para
+                diseñar áreas principales de la página como interfaces complejas o pequeñas. Grid Layout permite la organización
+                de elementos en filas y columnas, otorgando un mejor control sobre el diseño. Este paper mostrará
+                los distintos métodos de Grid Layout, ejemplos mediante imágenes, ventajas y desventajas, y conclusiones.
+            </p>
+        </section>
+
+        <section>
+            <h2>Introducción</h2>
+            <p>
+                Con el paso del tiempo, las interfaces web se han vuelto más complejas. Por eso surgió la
+                necesidad de herramientas más poderosas para estructurar contenido. Años atrás, los
+                desarrolladores usaban métodos como float y flexbox para crear diseños flexibles. Sin
+                embargo, estos métodos tienen limitantes al construir layouts bidimensionales complejos.
+
+                CSS Grid Layout nació para ofrecer un sistema más completo y preciso para el
+                diseño de interfaces web. Permite a los diseñadores crear estructuras basadas en una
+                cuadrícula adaptable a diferentes pantallas, mejorando la flexibilidad y mantenibilidad
+                del código.
+            </p>
+        </section>
+
+        <section>
+            <h2>Método 1: Grid Básico</h2>
+            <p>
+                El método más común para crear una cuadrícula consiste en definir un contenedor con columnas. Aquí un ejemplo sencillo:
+            </p>
+            <img src="Captura de pantalla 2025-05-18 200609.png" alt="">
+            <p>Propiedades utilizadas:</p>
+            <ul>
+                <li><strong>grid-template-columns:</strong> Define cuántas columnas tendrá la cuadrícula y su tamaño.</li>
+                <li><strong>grid-template-rows:</strong> Define el número de filas y su altura.</li>
+                <li><strong>gap:</strong> Establece el espacio entre los elementos de la cuadrícula (tanto filas como columnas).</li>
+                <li><strong>display: grid:</strong> Convierte el contenedor en un grid container.</li>
+            </ul>
+            <p><img alt="ejemplo de Grid básico" /></p>
+        </section>
+
+        <section>
+            <h2>Método 2: Grid Template Areas</h2>
+            <p>
+                Esta técnica permite nombrar áreas específicas dentro del grid, facilitando la lectura del código y la colocación de los elementos.
+            </p>
+            <img src="Captura de pantalla 2025-05-18 200209.png" alt="">
+            <p>Propiedades clave:</p>
+            <ul>
+                <li><strong>grid-template-areas:</strong> Define un diseño visual nombrando zonas específicas del grid.</li>
+                <li><strong>grid-area:</strong> Asocia un elemento HTML con una zona nombrada en el grid.</li>
+            </ul>
+            <p><img alt="Grid Template Areas" /></p>
+        </section>
+
+        <section>
+            <h2>Propiedades adicionales importantes</h2>
+            <ul>
+                <li><strong>grid-column:</strong> Permite posicionar un elemento en columnas específicas (por ejemplo, <code>grid-column: 1 / 3;</code>).</li>
+                <li><strong>grid-row:</strong> Similar al anterior pero para filas (por ejemplo, <code>grid-row: 2 / 4;</code>).</li>
+                <li><strong>justify-items:</strong> Alinea los ítems horizontalmente dentro de sus celdas (<code>start</code>, <code>center</code>, <code>end</code>, <code>stretch</code>).</li>
+                <li><strong>align-items:</strong> Alinea verticalmente los ítems dentro de sus celdas.</li>
+                <li><strong>place-items:</strong> Combinación de <code>justify-items</code> y <code>align-items</code>.</li>
+                <li><strong>grid-auto-rows / grid-auto-columns:</strong> Define tamaño de filas/columnas automáticas cuando no están especificadas.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Video: Ejemplo de Grid Layout</h2>
+            <video width="600" controls>
+                <source src="video/grid-ejemplo.mp4" type="video/mp4">
+                Video de explicación Grid Layout
+            </video>
+            
+        </section>
+
+        <section>
+            <h2>Ventajas de Grid Layout</h2>
+            <ul>
+                <li>Ofrece control sobre tanto el eje horizontal como el vertical, ideal para diseños complejos.</li>
+                <li>Se puede combinar con Flexbox. Flexbox para componentes, Grid para estructura.</li>
+                <li>Permite eliminar contenedores y estilos innecesarios, facilitando el mantenimiento del código.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Desventajas de Grid Layout</h2>
+            <ul>
+                <li>Compatibilidad limitada con navegadores antiguos.</li>
+                <li>Curva de aprendizaje inicial para principiantes.</li>
+                <li>El uso de valores fijos puede reducir la flexibilidad del diseño.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Conclusiones</h2>
+            <p>
+                Grid Layout es una herramienta fundamental para el diseño web moderno gracias a su capacidad para construir
+                estructuras limpias, organizadas y responsivas.
+            </p>
+            <p>
+                Su uso mejora la mantenibilidad del código y favorece el desarrollo de interfaces limpias, escalables y modernas.
+            </p>
+            <p>
+                Muchos diseños que antes requerían lógica en JavaScript ahora pueden resolverse únicamente con CSS Grid, mejorando el rendimiento y la mantenibilidad.
+            </p>
+            <p>
+                Gracias a su simplicidad y flexibilidad, Grid es una herramienta poderosa para crear prototipos de forma rápida, visualizando estructuras sin tener que definir cada detalle desde el inicio.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <h3>Contacto</h3>
+            <p>Autor: Ramirez Diaz Diego Armando</p>
+            <p>Email: ejemplo@correo.com</p>
+            <p>Autor: Condori Felix Nicole Janeth</p>
+            <p>Email: U21320985@utp.edu.pe</p>
+        </div>
+
+        <div>
+            <h3>Referencias</h3>
+            <ul>
+                <li>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout" target="_blank">
+                        Grid Layout: ¿Qué es?
+                    </a>
+                </li>
+                <li>
+                    <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">
+                        Guía completa de Grid
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>
